@@ -1,2 +1,2 @@
 # Math
- Solving Math Problems with the help of Programming
+Using Programming to assist with the solving of Math Problems
