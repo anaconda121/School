@@ -1,3 +1,7 @@
+# class-specific
+*.aux
+*.synctex.gz
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
