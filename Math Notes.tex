@@ -1,7 +1,16 @@
 \usepackage{amsmath}
-\usepackage{hyperref}
+
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+    }
 
 \title{Exeter Math Notes}
 \author{Tanish Tyagi}
@@ -16,28 +25,40 @@
 \begin{itemize}
     \item Important Derivatives
     
-     Page 159 - \href{https://www.exeter.edu/sites/default/files/documents/Math4_5_2021.pdf}
+     Page 159 - \url{https://www.exeter.edu/sites/default/files/documents/Math4_5_2021.pdf}
 \end{itemize}
 
 \section{Math 431}
 
-\begin{itemize}
+\begin{enumerate}
 
-\item Derivatives of Inverse Functions 
+\item \textbf{Derivatives of Inverse Functions}
 
-\item Critical Points
+\item \textbf{Critical Points}
 
-\item Local Minimum + Maximum
+\item \textbf{Local Minimum + Maximum}
 
-\item Inflection Points
+\item \textbf{Inflection Points}
 
-\item Extreme Value Theorem 
+\item \textbf{Extreme Value Theorem}
 
-\item Related Rates
+If $f(x)$ is continuous for a range $a$ through $b$, then global maximum or minimum occurs at critical values ($f'(x) = 0$ or $f'(x) = undefined$ or at the endpoints $x = a$ or $x = b$.
+
+Problems: 535, 
+
+\item \textbf{Related Rates}
 
 \item Curvature 
 
-\item Euler's Method - Approximating Value of any function given derivative
+\item \textbf{Euler's Method - Approximating Value of any function given derivative}
+
+Given $f'(x)$ that is not separable and hard to anti-differentiate, you can estimate any $f(x)$ value. 
+
+We can utilize a recursive sequence to store all of our approximations. It is defined as: $y_{n+1} = y_{n} + h(f'(x))$, where $h$ is our step size. To most accurately estimate values, we can make $h$ approach 0.
+
+Example Simulation: \url{https://replit.com/@TanishTyagi123/Eulers-Method-Math-431-550#main.py}
+
+Problems: 550, 
 
 \item Solving Differential Equations 
 
@@ -72,6 +93,6 @@ $$
   
 
 
-\end{itemize}
+\end{enumerate}
 
 \end{document}
