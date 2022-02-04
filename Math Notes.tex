@@ -2,6 +2,10 @@
 
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage[thinc]{esdiff}
+\usepackage{derivative}
+\usepackage{tabularx}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -12,7 +16,7 @@
     pdfpagemode=FullScreen,
     }
 
-\title{Exeter Math Notes}
+\title{Phillips Exeter Academy Calculus Notes}
 \author{Tanish Tyagi}
 \date{February 2022}
 
@@ -23,22 +27,55 @@
 \section{Math 421}
 
 \begin{itemize}
-    \item Important Derivatives
+    \item \textbf{Important Derivatives}
     
-     Page 159 - \url{https://www.exeter.edu/sites/default/files/documents/Math4_5_2021.pdf}
+    Page 159 - \url{https://www.exeter.edu/sites/default/files/documents/Math4_5_2021.pdf}
 \end{itemize}
 
 \section{Math 431}
 
 \begin{enumerate}
 
+\item \textbf{Second Derivatives}
+
+Denoted as $f''(x)$ or $\frac{\odif[order={2}]{x}}{\odif[order={2}]{y}}$. 
+If $f''(a) > 0$, then the slope of the tangent line increases as x moves from less than $a$ to greater than $a$. Graph will be concave up.
+
+If $f''(a) < 0$, the slope of the tangent line decreases as x moves from less than $a$ to greater than $a$. Graph will be concave down.
+
+\begin{center}
+\begin{tabularx}{0.8\textwidth} {
+| >{\raggedright\arraybackslash}X 
+| >{\centering\arraybackslash}X 
+| >{\raggedleft\arraybackslash}X |}
+\hline
+& $f''(x) < 0$ & $f''(x) > 0$ \\
+\hline
+$f'(x) < 0$ & function is decreasing at a decreasing rate & function is increasing at an increasing rate\\ 
+\hline
+$f'(x) > 0$ & function is increasing at a decreasing rate & function is increasing at an increasing rate \\
+\hline
+\end{tabularx}
+\end{center}
+
 \item \textbf{Derivatives of Inverse Functions}
+
+We know that $f(f^{-1}(x)) = x$. We are interested in finding $f'^{-1}x$. If we apply the chain rule, we get $f'(f^{-1}(x)) * f'^{-1}(x) = 1$. Therefore
+$f'^{-1}(x) = \frac{1}{f'(f^{-1}(x))}$.
+
+Problems: 547, 554, 
 
 \item \textbf{Critical Points}
 
+When $f'(x) = 0$ or $f'(x) = undefined$. 
+
 \item \textbf{Local Minimum + Maximum}
 
+When $f'(x)$ goes from $ > 0$ to $ < 0$, the point where $f'(x) = 0$ is a local maximum. When $f'(x)$ goes from $ < 0$ to $ > 0$, the point where $f'(x) = 0$ is a local minimum. 
+
 \item \textbf{Inflection Points}
+
+To find inflection points, look for when the second derivative is equal to 0. Inflection point marks the change of concavity ($f''(x) > 0$ to $f''(x) < 0$ or vice versa. Once you find the point where $f''(x) = 0$, make sure to check x-coordinates before and after the point to make sure the concavity actually changes/$f''(x)$ changes signs. 
 
 \item \textbf{Extreme Value Theorem}
 
@@ -48,9 +85,9 @@ Problems: 535,
 
 \item \textbf{Related Rates}
 
-\item Curvature 
+\item \textbf{Curvature} 
 
-\item \textbf{Euler's Method - Approximating Value of any function given derivative}
+\item \textbf{Euler's Method}
 
 Given $f'(x)$ that is not separable and hard to anti-differentiate, you can estimate any $f(x)$ value. 
 
@@ -62,11 +99,13 @@ Problems: 550,
 
 \item Solving Differential Equations 
 
-\item Fundamental Theorem of Calculus 
+\item \textbf{Fundamental Theorem of Calculus} 
 
-\item Integral Notation: 
+Part 1: 
 $$ F'(x) = f(x) $$
-$$ \int_{a}^{b} x^2 \,dx = F(a) - F(b) $$
+$$ \int_{a}^{b} f(x) \,dx = F(a) - F(b) $$
+
+Problems: 524, 572
 
 \item Riemann Sums - Approximating Integrals
 
@@ -74,7 +113,7 @@ Let's say you want to approximate the integral $\int_{a}^{b} A(x) \,dx$:
 
 Let's define $\Delta x = \frac{b - a}{n}$
 
-    \begin{itemize}
+    \begin{enumerate}
     \item Left Hand Riemann Sum
 $$
 \lim_{n\to\infty} \sum_{k=0} ^{n-1} A(k\Delta x)\Delta x 
@@ -89,7 +128,7 @@ $$
 % $$
 % \lim_{n\to\infty} \sum_{k=1} ^{n} f(kx/n) + f(
 % $$
-  \end{itemize}
+  \end{enumerate}
   
 
 
