@@ -1,11 +1,17 @@
+\documentclass{article}
+
 \usepackage{amsmath}
 
-\documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{mathtools}
 \usepackage[thinc]{esdiff}
 \usepackage{derivative}
 \usepackage{tabularx}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage[margin=0.5in]{geometry}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -26,15 +32,69 @@
 
 \section{Math 421}
 
-\begin{itemize}
+\begin{enumerate}
     \item \textbf{Important Derivatives}
     
     Page 159 - \url{https://www.exeter.edu/sites/default/files/documents/Math4_5_2021.pdf}
-\end{itemize}
+    
+    \item \textbf{Even and Odd Functions}
+    
+    Odd function: $f(x) = -f(-x)$
+    
+    Even function: $f(x) = f(-x)$
+    
+    \textbf{The derivative of an odd function is an even function.}
+    
+    Proof:
+
+    $f(x) = -f(-x)$ 
+    
+    $f'(x) = -(f'(-x) * -1)$ by chain rule
+    
+    $f'(x) = f'(-x)$, property of even functions
+    
+    \textbf{The derivative of an even function is an odd function.} This statement can be proved in a similar fashion to the above method. 
+
+\end{enumerate}
 
 \section{Math 431}
 
 \begin{enumerate}
+
+\item \textbf{Properties of Differentiable Functions}
+
+A function is differentiable at $a$ if $f'(a)$ exists. It is differentiable on the open interval $(a, b)$ if it is differentiable at every number in the interval. If a function is differentiable at $a$ then it is also continuous at $a$. The contrapositive of this theorem states that if a function is discontinuous at $a$ then it is not differentiable at $a$.
+
+A function is not differentiable at $a$ if its graph illustrates one of the following cases at $a$:
+
+\begin{enumerate}
+    \item \textbf{Discontinuity}
+    A function is discontinuous when points are isolated from each other on a graph.
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.6]{discontinuity.png}
+        \caption{Function that has a discontinuity}
+    \end{figure}
+    
+    \item \textbf{Vertical Tangent Line}
+    The slope of a vertical tangent line is undefined, leading the function to not be differentiable at $a$ if the tangent line is vertical at $a$. 
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.5]{vertical_tangent_line.png}
+        \caption{Function that has a vertical tangent line}
+    \end{figure}
+    
+    \item \textbf{Not Smooth}
+
+    If the left and right hand limits are different at $a$, the function is therefore ``not smooth" at $a$. 
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.5]{not_smooth.png}
+        \caption{Function that is not smooth}
+    \end{figure}
+\end{enumerate}
+
+Problems: 471
 
 \item \textbf{Second Derivatives}
 
@@ -58,12 +118,17 @@ $f'(x) > 0$ & function is increasing at a decreasing rate & function is increasi
 \end{tabularx}
 \end{center}
 
+Problems: 545, 546
+
 \item \textbf{Derivatives of Inverse Functions}
 
 We know that $f(f^{-1}(x)) = x$. We are interested in finding $f'^{-1}x$. If we apply the chain rule, we get $f'(f^{-1}(x)) * f'^{-1}(x) = 1$. Therefore
 $f'^{-1}(x) = \frac{1}{f'(f^{-1}(x))}$.
 
 Problems: 547, 554, 
+
+Walkthrough of 547:
+
 
 \item \textbf{Critical Points}
 
@@ -81,11 +146,21 @@ To find inflection points, look for when the second derivative is equal to 0. In
 
 If $f(x)$ is continuous for a range $a$ through $b$, then global maximum or minimum occurs at critical values ($f'(x) = 0$ or $f'(x) = undefined$ or at the endpoints $x = a$ or $x = b$.
 
-Problems: 535, 
+Problems: 535, 543, 
 
 \item \textbf{Related Rates}
 
+Problems: 541, 561, 571
+
+Walkthrough of 541: 
+
+Walkthrough of 571: 
+
 \item \textbf{Curvature} 
+
+Problems: 527, 548, 563
+
+Walkthrough of 563:
 
 \item \textbf{Euler's Method}
 
@@ -97,7 +172,14 @@ Example Simulation: \url{https://replit.com/@TanishTyagi123/Eulers-Method-Math-4
 
 Problems: 550, 
 
-\item Solving Differential Equations 
+\item \textbf{Solving Differential Equations}
+
+Problems: 528, 549, 567, part of 571
+
+Walkthrough of 567: 
+
+Walkthrough of part of 571:
+
 
 \item \textbf{Fundamental Theorem of Calculus} 
 
@@ -107,31 +189,100 @@ $$ \int_{a}^{b} f(x) \,dx = F(a) - F(b) $$
 
 Problems: 524, 572
 
-\item Riemann Sums - Approximating Integrals
+\item \textbf{Riemann Sums}
+
+Riemann sums are a way of approximating integrals. 
 
 Let's say you want to approximate the integral $\int_{a}^{b} A(x) \,dx$: 
 
 Let's define $\Delta x = \frac{b - a}{n}$
 
     \begin{enumerate}
-    \item Left Hand Riemann Sum
+    \item \textbf{Left Hand Riemann Sum}
 $$
 \lim_{n\to\infty} \sum_{k=0} ^{n-1} A(k\Delta x)\Delta x 
 $$
-    \item Right Hand Riemann Sum 
+    \item \textbf{Right Hand Riemann Sum}
 $$
 \lim_{n\to\infty} \sum_{k=1} ^{n} A(k\Delta x)\Delta x 
 $$
 
-    \item Midpoint Riemann Sum 
-    \item Trapezoidal Riemann Sums
+    \item \textbf{Midpoint Riemann Sum} 
+    \item \textbf{Trapezoidal Riemann Sums}
 % $$
 % \lim_{n\to\infty} \sum_{k=1} ^{n} f(kx/n) + f(
 % $$
   \end{enumerate}
+
+Problems: 558, 559, 568
   
+\item \textbf{Integration}
+
+\begin{enumerate}
+    \item \textbf{Integration with Absolute Values}
+    
+    To get rid of the absolute value expressions, create a piecewise definition of the equation without absolute values. 
+    
+    Problems: 599, 623
+    
+    \textbf{Walkthrough of 599:}
+    
+    We can create a piecewise defintion of $|cos(x)|$ as such:
+    \[ \begin{cases} 
+    $cos(x)$ &  0 \leq $ x $ \leq \frac{\pi}{2} \\
+    $-cos(x)$ &  \frac{\pi}{2} \leq $ x $ \leq \pi 
+    \end{cases}
+    \]
+    
+    \textbf{Note:} We need $-cos(x)$ for the second case because $cos(x) \leq 0$ for $\frac{\pi}{2} \leq x \leq \pi $ so $-(-) = +$
+    
+    Now we integrate:
+    \begin{equation*}
+    \int_{0}^{\pi/2} cos(x) \,dx +  \int_{\pi/2}^{\pi} cos(x) \,dx = 1 + 1 = 2
+    \end{equation*}
+    
+    \item \textbf{Integration with Parametrics}
+    
+    \begin{equation*}
+    \int y \,dx = \int y \frac{dx}{dt} \,dt
+    \end{equation*}
+    
+    Problems: 611, 624, 634
+    
+
+    
+\end{enumerate}
+
+\textbf{Important Integrals:}
+\begin{enumerate}
+    \item \begin{equation*}
+    \int_{-a}^{a} \sqrt{a^2-x^2} \,dx = \frac{\pi a^2}{2}
+    \end{equation*}
+    
+    \item \begin{equation*}
+    \int sin^2(x) \,dx = 0.5(x - sin(x)cos(x))
+    \end{equation*}
+    
+    \item \begin{equation*}
+    \int cos^2(x) \,dx = 0.5(x + sin(x)cos(x))
+    \end{equation*}
+\end{enumerate}
 
 
+
+
+    
+    
+    Problems: 534, 539, 
+  
+  \item \textbf{Miscellaneous}
+  
+  Problems: 
+  \begin{enumerate}
+      \item 537 - Differentiating with Parametric Equations
+      \item 555 - Simplifying Functions for Easy Anti-differentiation 
+      \item 566 - Hard Derivative 
+  \end{enumerate}
 \end{enumerate}
 
 \end{document}
