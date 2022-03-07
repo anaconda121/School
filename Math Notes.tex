@@ -7,11 +7,12 @@
 \usepackage[thinc]{esdiff}
 \usepackage{derivative}
 \usepackage{tabularx}
+\usepackage{float}
 
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=.5in]{geometry}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -70,29 +71,28 @@ A function is not differentiable at $a$ if its graph illustrates one of the foll
 \begin{enumerate}
     \item \textbf{Discontinuity}
     A function is discontinuous when points are isolated from each other on a graph.
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.6]{discontinuity.png}
-        \caption{Function that has a discontinuity}
-    \end{figure}
     
     \item \textbf{Vertical Tangent Line}
     The slope of a vertical tangent line is undefined, leading the function to not be differentiable at $a$ if the tangent line is vertical at $a$. 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.5]{vertical_tangent_line.png}
-        \caption{Function that has a vertical tangent line}
-    \end{figure}
     
     \item \textbf{Not Smooth}
-
     If the left and right hand limits are different at $a$, the function is therefore ``not smooth" at $a$. 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.5]{not_smooth.png}
-        \caption{Function that is not smooth}
-    \end{figure}
 \end{enumerate}
+
+\begin{figure}[H]
+\minipage{0.32\textwidth}
+  \includegraphics[scale=0.6]{discontinuity.png}
+  \caption{Function that has a discontinuity}\label{fig:awesome_image1}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[scale=0.5]{not_smooth.png}
+  \caption{Function that has a vertical tangent line}\label{fig:awesome_image2}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[scale=0.5]{vertical_tangent_line.png}
+  \caption{Function that is not smooth}\label{fig:awesome_image3}
+\endminipage
+\end{figure}
 
 Problems: 471
 
