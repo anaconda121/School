@@ -96,6 +96,15 @@ A function is not differentiable at $a$ if its graph illustrates one of the foll
 
 Problems: 471
 
+\item \textbf{Antiderivatives}
+
+\textbf{Important Antiderivative Rules:}
+\begin{enumerate}
+    \item Volume is the antiderivative of area for all shapes
+\end{enumerate}
+
+Problems: 473-475, 486, 
+
 \item \textbf{Second Derivatives}
 
 Denoted as $f''(x)$ or $\frac{\odif[order={2}]{x}}{\odif[order={2}]{y}}$. 
@@ -156,11 +165,52 @@ Walkthrough of 541:
 
 Walkthrough of 571: 
 
-\item \textbf{Curvature} 
+\item \textbf{Radius of Curvature} 
 
-Problems: 527, 548, 563
+The radius of curvature is defined as the radius of the circular arc which best approximates the curve at a point $a$. 
 
-Walkthrough of 563:
+General Process:
+\begin{itemize}
+    \item Find general form of the slope of normal line (negative reciprocal of slope of tangent line). 
+    \item Use point-slope form to find equation of normal line for $P = (a, f(a))$. 
+    \item Find intersection between equation of normal line at point of interest and equation of normal line from step 2. This will give you the center of curvature for the point of interest.
+    \item Use distance formula to find radius of curvature by finding distance from center of curvature to point of interest. 
+\end{itemize}
+
+Problems: 507d, 527, 548, 563
+
+\textbf{Walkthrough of 507d:}
+
+$P = (a, cos(a))$
+
+$f(x) = cos(x), f'(x) = -sin(x)$
+
+Slope of Normal Line: \(\frac{1}{sin(x)}\)
+
+Point Slope Form: y - cos(a) = \(\frac{(x-a)}{sin(x)}\)
+
+Normal Line Equation: y = \(\frac{(x-a)}{sin(a)}\) + cos(a)
+
+We want to find the radius of curvature at x = 0.
+
+Therefore $a \rightarrow\text{0}$. We now need to find the intersection between lines x = 0 (normal line at x = 0) and our equation found above.
+
+y = \(\frac{(0-a)}{sin(a)}\) + cos(a)
+
+\(\lim_{a\to0} \frac{a}{sin(a)}\) = 1, therefore the first part of our equation equals $-1$. 
+
+As $a \rightarrow\text{0}$, cos(a) goes to 1. 
+
+$y = -1 + 1 = 0.$ Therefore, our center of curvature is $(0,0).$ We can now use distance formula and get a radius of curvature of 1. 
+
+The below graph illustrates this:
+
+\begin{figure}[H]
+\centering
+\includegraphics{curvature.png}
+\caption{Curvature at $x = 0$ for $y = cos(x)$ }
+\end{figure}
+
 
 \item \textbf{Euler's Method}
 
@@ -267,12 +317,6 @@ Problems: 558, 559, 568
     \int cos^2(x) \,dx = 0.5(x + sin(x)cos(x))
     \end{equation*}
 \end{enumerate}
-
-
-
-
-    
-    
     Problems: 534, 539, 
   
   \item \textbf{Miscellaneous}
