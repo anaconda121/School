@@ -161,11 +161,41 @@ Problems: 535, 543,
 
 \item \textbf{Related Rates}
 
-Problems: 541, 561, 571
+\textbf{Problems: 541, 561, 571}
 
-Walkthrough of 541: 
+\textbf{Walkthrough of 541:}
 
-Walkthrough of 571: 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{541_diagram.png}
+\caption{Diagram Illustrating Situation in Problem 541}
+\end{figure}
+
+Based off this diagram, we know $(z(t))^2 = (x(t))^2 + (y(t))^2$.
+
+If we differentiate this equation, we get: $2(z(t)) * \frac{dz}{dt} = 2(x(t)) * \frac{dx}{dt} + 2(y(t)) * \frac{dy}{dt}$. 
+
+Therefore, $\frac{dz}{dt} = \frac{2(x(t)) * \frac{dx}{dt} + 2(y(t)) * \frac{dy}{dt}}{2z(t)}$.
+
+From the problem statement, we know $x(t) = -20 + 80t$, $y(t) = -15 + 40t, \frac{dx}{dt} = 80, \frac{dy}{dt} = 40$.
+
+$\frac{dz}{dt} = \frac{1}{z}(x\frac{dx}{dt} + y\frac{dy}{dt})$.
+
+\textbf{Part a:}
+
+At t = 0, $\frac{1}{25}(-20 * 80 + 15 * 40) = -88$ mph. \textbf{So 88 mph is rate of separation}.
+
+\textbf{Part b:}
+
+Use t = 1 to find all relevant values in the equation for $\frac{dz}{dt}$ to get \textbf{89.23 mph}.
+
+\textbf{Part c:}
+
+We need to find the global minimum of $z(t)$. Based off of the Extreme Value Theorem, this will be when $\frac{dz}{dt} = 0$. For $\frac{dz}{dt}$ to equal $0$, $x\frac{dx}{dt} + y\frac{dy}{dt}$ needs to equal $0$.
+
+$(-20 + 80t)(80) + (-15 + 40t)(40) = 0$. $t = \frac{11}{40}$, so $16.5$ minutes after 12 pm. The distance between both cars at this time is approx. $4.47$ miles.
+
+\textbf{Walkthrough of 571:} 
 
 \item \textbf{Radius of Curvature} 
 
@@ -179,7 +209,7 @@ General Process:
     \item Use distance formula to find radius of curvature by finding distance from center of curvature to point of interest. 
 \end{itemize}
 
-Problems: 507d, 527, 548, 563
+\textbf{Problems: 507d, 527, 548, 563}
 
 \textbf{Walkthrough of 507d:}
 
@@ -222,15 +252,25 @@ We can utilize a recursive sequence to store all of our approximations. It is de
 
 Example Simulation: \url{https://replit.com/@TanishTyagi123/Eulers-Method-Math-431-550#main.py}
 
-Problems: 550, 
+\textbf{Problems: 550,} 
 
 \item \textbf{Solving Differential Equations}
 
-Problems: 528, 549, 567, part of 571
+\textbf{Problems: 518, 528, 549, 567, part of 571}
 
-Walkthrough of 567: 
+\textbf{Walkthrough of 518e:}
 
-Walkthrough of part of 571:
+Our goal is to find the equation that has a derivative equal to: $(y-cos(x))$ $(\frac{dy}{dx} + sin(x))$
+
+One way to solve this is to assign $u = y-cos(x)$. $u' = \frac{dy}{dx} + sin(x)$. 
+
+Therefore the given equation can be rewritten as $u * u'$.
+
+Using the chain rule, the solution to this is $\frac{1}{2}(u^2) = \frac{1}{2}(y-cos(x))^2 + C.$
+
+\textbf{Walkthrough of 567:} 
+
+\textbf{Walkthrough of part of 571:}
 
 
 \item \textbf{Fundamental Theorem of Calculus} 
@@ -264,9 +304,30 @@ $$
 % $$
 % \lim_{n\to\infty} \sum_{k=1} ^{n} f(kx/n) + f(
 % $$
+    \item \textbf{Converting from Riemann Sum to Integrals}
+    
+    I will use the Riemann Sums from 523c) to illustrate this concept.
+    
+    \textbf{Walkthrough of 523c):}
+    
+    \begin{enumerate}
+        
+        \item 
+        $\lim_{n \to\infty} \sum_{k=1} ^{n} sin(\frac{k \pi}{n}) * \frac{\pi}{n}$
+        
+        When $k = n$, $sin(\frac{k \pi}{n}) = sin(\pi).$ When $k = 1$, $sin(\frac{k \pi}{n}) = sin(0).$ This gives us the bounds of the integral, which are $0\rightarrow\pi.$ This means that the integral equivalent of this Riemann sum is $\int_{0}^{\pi} sin(x) \,dx$.
+        
+        \item 
+        $\lim_{n \to\infty} \sum_{k=1} ^{n} (\frac{2k}{n})^2 * \frac{2}{n}$
+        
+        We can apply a similar concept to the above part to find the bounds of the integral, which are $0\rightarrow2$. This means that the integral equivalent is $\int_{0}^{2} (x)^2 \,dx$.
+    
+    \end{enumerate}
+
+
   \end{enumerate}
 
-Problems: 558, 559, 568
+Problems: 523, 558, 559, 568
   
 \item \textbf{Integration}
 
