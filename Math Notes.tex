@@ -136,10 +136,15 @@ Problems: 545, 546
 We know that $f(f^{-1}(x)) = x$. We are interested in finding $f'^{-1}x$. If we apply the chain rule, we get $f'(f^{-1}(x)) * f'^{-1}(x) = 1$. Therefore
 $f'^{-1}(x) = \frac{1}{f'(f^{-1}(x))}$.
 
-Problems: 547, 554, 
+\textbf{Problems: 547, 554,} 
 
-Walkthrough of 547:
+\textbf{Walkthrough of 547:}
 
+To prove $f(t) = t - sin(t)$ is increasing, we can take a look at its derivative, $1 - cos(t)$. If $1 - cos(t) < 0$, then $f(t)$ is always increasing. For $1 - cos(t)$ to be less than 0, $cos(t) > 1$, which is not possible. To prove that $f(t)$ is differentiable, $1 - cos(t)$ must be defined at all locations, which is true.  
+
+We know that $f'^{-1}(x) = \frac{1}{f'(f^{-1}(x))}$.
+
+$f^{-1}(x) = $
 
 \item \textbf{Critical Points}
 
@@ -332,11 +337,37 @@ Problems: 523, 558, 559, 568
 \item \textbf{Integration}
 
 \begin{enumerate}
+    \item \textbf{Integration with Partial Fractions}
+    
+    Partial Fractions are a method of simplifying complex fractions into 2 or more fractions. This allows for easy integration, as you can applying term-by-term anti-differentiation rules.
+    
+    \textbf{Problems: 555, 556}
+    
+    \textbf{Walkthrough of 555/556:}
+    
+    Let's split $\frac{2}{x(x-2)}$ into $\frac{A}{(x)} + \frac{B}{(x-2)}$.
+    
+    Multiply both terms to get $\frac{2}{x(x-2)}$ into $\frac{A(x-2)}{x(x-2)} + \frac{B(x)}{x(x-2)}$.
+    
+    We know that $A(x-2) + B(x) = 2$. We can simplify this to say $x(A + B) - 2A = 2$. 
+    
+    Since there is no term in the numerator of the original function of degree 1, we know that $A + G = 0$ and $-2A = 2$. This gives us $A = -1$ and $B = 1$.
+    
+    $\frac{2}{x(x-2)}$ can now be written as $\frac{-1}{(x)} + \frac{1}{(x-2)}$. \\
+    
+    Problem 556 now asks us to take $\int_{3}^{5} \frac{2}{x(x-2)} \,dx$.
+    
+    We can rewrite the given expression as $\int_{3}^{5} \frac{-1}{x} + \frac{1}{x-2}\,dx$.
+    
+    This is an extremely easy integral given that the derivative of $ln|x| = \frac{1}{x}$. 
+    
+    We can apply this to get an answer of $\frac{ln|9|}{ln|5|}$.
+    
     \item \textbf{Integration with Absolute Values}
     
     To get rid of the absolute value expressions, create a piecewise definition of the equation without absolute values. 
     
-    Problems: 599, 623
+    \textbf{Problems: 599, 623}
     
     \textbf{Walkthrough of 599:}
     
@@ -361,8 +392,6 @@ Problems: 523, 558, 559, 568
     \end{equation*}
     
     Problems: 611, 624, 634
-    
-
     
 \end{enumerate}
 
