@@ -1,0 +1,130 @@
+\documentclass[11pt,twoside]{article}
+
+\usepackage{paperlighter}
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{microtype}
+\usepackage{graphicx}
+\graphicspath{ {figure/} }
+
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+% Todonotes is useful during development; simply uncomment the next line
+%    and comment out the line below the next line to turn off comments
+%\usepackage[disable,textsize=tiny]{todonotes}
+\usepackage[textsize=tiny]{todonotes}
+\usepackage{wrapfig}
+
+\slimtitle{Force on a Wire Lab Report}
+\slimauthor{Tanish Tyagi}
+
+\begin{document}
+
+\lightertitle{Force on a Wire Lab Report}
+\lighterauthor{Tanish Tyagi}
+
+\section{Experiment Results and Analysis}
+
+% Part 1 Graph and Analysis 
+\subsection{Part 1 Results and Analysis}
+\begin{wrapfigure}{l}{0.7\textwidth}
+    \centering
+    \includegraphics[width=0.7\textwidth]{part_1_graph.png}
+    \caption{Graph of Force vs. Current}
+\end{wrapfigure}
+
+The equation of best fit for this graph was $Force (N) = -0.002254 (\frac{N}{amp}) \cdot I (amp)$. I made the equation go through the origin, as when $0$ amps of current is passed through the wire and plastic board, no additional force will be exerted by the wire onto the magnet and therefore the scale. Therefore, the point $(0,0)$ can serve as an additional data point. The data also suggests that force is proportional to current.
+
+% Part 2 Graph and Analysis 
+\subsection{Part 2 Results and Analysis}
+\begin{wrapfigure}{l}{0.7\textwidth}
+    \centering
+    \includegraphics[width=0.7\textwidth]{part_2_graph.png}
+    \caption{Graph of Force vs. Length of Wire}
+\end{wrapfigure}
+
+The equation of best fit for this graph was $Force (N) = -0.1354 (\frac{N}{m}) \cdot L (m)$. I made the equation go through the origin, as when the length of the wire is $0$ amps of current is passed through the wire and plastic board, there is no opportunity for current to go through the wire and create a downward force that increases the balance on the scale. \\ \\ Therefore, the point $(0,0)$ can serve as an additional data point. The data also suggests that force is proportional to the length of the wire.
+
+% Part 3 Graph and Analysis 
+\subsection{Part 3 Results and Analysis}
+\begin{wrapfigure}{l}{0.7\textwidth}
+    \centering
+    \includegraphics[width=0.7\textwidth]{part_3_graph.png}
+    \caption{Graph of Force vs. Number of Magnets}
+\end{wrapfigure}
+
+The equation of best fit for this graph was $Force (N) = -0.0007808 (N) \cdot M$. I made the equation go through the origin, as it was of the recorded data points. This makes sense, as when $0$ magnets are present, there are no objects exerting a force onto the wire, which means that the wire will not exert a downwards force onto the objects / scale by Newton's 3rd Law. This data also suggests that force is proportional to the number of magnets. \\
+
+\textbf{General Note about all three graphs: You will notice that all my slopes and force values are negative. This is because the orientation of the horseshoe was flipped during the experiment. However, all that needs to be considered is the magnitudes of the aforementioned values.}
+
+\section{Creating a Single Equation that Combines the Relationships between Force and Current, Length of Wire, and Number of Magnets}
+
+In the above section we learned three things: 
+
+\begin{enumerate}
+\item $F \propto I$, $I$ = current
+\item $F \propto L$, $L$ = length of wire
+\item $F \propto N$, $N$ = number of magnets
+\end{enumerate}
+
+We can combine these relationships to get a general equation $F = K \cdot I \cdot L \cdot N$. The units of $K$ will be $\frac{N}{amp \cdot m} = \frac{N}{C \cdot \frac{m}{s}}$, which is equivalent to a Tesla. This makes sense, as $K \cdot N$ describes the strength of $B$, which also has the unit of Tesla.
+
+To find the numerical value of $K$, I utilized two methods: 
+
+\begin{enumerate}
+    \item I extracted three separate $K$ values from the Force vs Current, Length of Wire, and Number of Magnets graphs. For example, take the Force vs. Current graph.
+    
+    The line of best for this graph can be written as $F = M \cdot I$. We know that $M = K \cdot L \cdot N$, and $L = 0.0322 m$ and $N = 6$ magnets. We can now solve for $K$. 
+    
+    I performed a similar process for the other two graphs as well to ensure the rigor of my $K$ value. The $K$ values for all three values are below:
+    
+    \begin{enumerate}
+        \item Force vs. Current - $K \approx 0.01167$
+        \item Force vs. Length of Wire - $K \approx 0.01128$
+        \item Force vs. Number of Magnets - $K \approx 0.01214$
+    \end{enumerate}
+    
+    When these $K$ values are used on graphs that contain different data from the one used to compute the particular $K$ value, the correlation is on average $0.995$, showing that these values are generalizable.   
+    
+    \item I graphed $F$ vs. $N \cdot I \cdot L$ for all the data I collected and found the slope of the best fit line for this data. 
+    
+\end{enumerate}
+\begin{wrapfigure}{l}{0.7\textwidth}
+    \centering
+    \caption{Graph of $F vs. N \cdot I \cdot L$}
+    \includegraphics[width=0.7\textwidth]{k_graph.png}
+\end{wrapfigure}
+
+The equation of best fit for this graph was $F = 0.01162 \frac{N}{amp \cdot m} \cdot NIL (Amp \cdot m)$. Using this method, $K = 0.01162 \frac{N}{amp \cdot m}$. If we compare all four $K$ values, we see that they are all extremely similar, with variations starting to develop only around the 3rd significant figure. This $K$ value is also generalizable to the other graphs, as it achieved correlation values of $0.996$. \\
+
+$K$ is not a universal constant; it would primarily depend on the strength of the magnetic field generated. The strength of the magnetic field also depends on how close to the wire the magnet. The closer the magnet is to the wire, the larger the magnitude of the magnetic field and the larger the force exerted by the wire onto the magnet are.
+
+\section{Additional Questions}
+
+\begin{enumerate}
+    \item Using the slap rule, we can find the direction of the force at various points in the wire. Figure 5 depicts this.  
+    
+    \parbox{\linewidth}{\centering
+    \begin{wrapfigure}{l}{0.5\textwidth}
+        \centering
+        \caption{}
+        \includegraphics[width=0.4\textwidth]{force_on_wire_additional_question_2.png}
+    \end{wrapfigure}
+    
+    As we can see, at the vertical points in the wire, the direction of the force is horizontal. This means that these forces will not affect the scale reading as they are not oriented up or down. Secondly, the forces created by the vertical parts of the wire will always cancel out, as the amount of current and strength of the magnetic field will be the same at corresponding points. This means that should there be minor set-up errors in which the plastic board is not fully vertical, any component with a direction up or down will be irrelevant. This is the motivation behind solely measuring the horizontal portion of the wire. 
+    }
+    \linebreak % \linebreak \linebreak \linebreak %\linebreak \linebreak \linebreak
+    
+    \item Newton's 3rd law states that $F_A = -F_B$, where $A$ and $B$ are the magnet and wire, respectively. Using this, we can conclude that in order for there to be a downward force on the magnet exerted by the wire, there needs to be an upward force exerted by the magnet onto the wire. The wire will exert a downward force onto the magnet in response. Using our magnetism rules, we know that the magnetic force can only point upwards if the current is going towards the right ($\rightarrow$).  
+    
+    \item The amount of force that needs to be exerted upwards onto the wire by the magnet needs to be equivalent to 6.7 grams in Newtons. Using $F = ma$, we get 6.7 grams = $\approx 0.066$ Newtons. In prior parts, we used to our data to calculate $K$. I will be using $K = 0.01162 \frac{N}{amp \cdot m}$, but since the values of $K$ calculated are so similar, either one is fine. 
+    
+    Using $F = K \cdot I \cdot L \cdot N$, we can solve for $I$ to get $I = \frac{F}{K \cdot L \cdot N}$. Using our value of $K$ and the givens from the question, we get $I = \frac{0.066}{0.01140 \cdot 0.048 \cdot 4} = \approx 30$ Newtons. 
+    
+\end{enumerate}
+
+\end{document}
