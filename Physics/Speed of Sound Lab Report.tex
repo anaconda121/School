@@ -1,0 +1,61 @@
+\documentclass[11pt,twoside]{article}
+
+\usepackage{paperlighter}
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{microtype}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+
+\usepackage{tikz}
+\usetikzlibrary{snakes}
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+% Todonotes is useful during development; simply uncomment the next line
+%    and comment out the line below the next line to turn off comments
+%\usepackage[disable,textsize=tiny]{todonotes}
+\usepackage[textsize=tiny]{todonotes}
+\usepackage{wrapfig}
+
+\slimtitle{Speed of Sound Lab Report}
+\slimauthor{Tanish Tyagi}
+
+\begin{document}
+
+\lightertitle{Speed of Sound Lab Report}
+\lighterauthor{Tanish Tyagi}
+
+\section{Analysis of Standing Waves in Air Data}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\columnwidth]{air_graph_with_fits.png}
+    \caption{Graph of Air Column Length vs. Wavelength of Sound Wave}
+\end{figure}
+
+ We can construct $L = m\lambda$ equations from the three subsets of the data, where $L$ = length of the air column and $\lambda$ = wavelength of the sound wave. This gives us the length of the air column in terms of the wavelength of the sound wave. We can manipulate the equation to get $\lambda = \frac{L}{m}$, which gives us the wavelength of the sound wave in terms of the length of the air column. This means that the data tells us the relationship between the length of the air column and the wavelength of the sound wave.
+ 
+\textbf{Equation Fits for subsets of data:}
+
+Black Line: $L =\frac{5}{4}\lambda$, $\lambda = \frac{4}{5}L$. 
+
+Blue Line: $L =\frac{3}{4}\lambda$, $\lambda = \frac{4}{3}L$
+
+Green Line: $L = \frac{1}{4}\lambda$, $\lambda = 4L$
+
+These equations mean that one $\lambda$ is $\frac{4}{5}$, $\frac{4}{3}$, and $4$ times the length of the tube, respectively. These equations can also help us draw the resonant sound waves in the pipes. Below are the diagrams for all subsets:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\columnwidth]{resonant_sonud_waves.jpg}
+    \caption{Resonant Sound Waves Diagrams for All Subsets of Data}
+\end{figure}
+
+We can see that the each of the waves have with a node at the closed end of the tube and an antinode at the open end. This is because the air molecules are not free to vibrate back and forth at the closed end, therefore forming a node. At the open end of the tube, the air molecules are free to vibrate, which allows for the formation of an antinode. 
+
+\end{document}
