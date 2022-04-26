@@ -13,6 +13,8 @@
 \usepackage{tikz}
 \usetikzlibrary{snakes}
 
+\usepackage{wrapfig}
+
 % Attempt to make hyperref and algorithmic work together better:
 \newcommand{\theHalgorithm}{\arabic{algorithm}}
 
@@ -37,8 +39,7 @@
     \includegraphics[width=0.6\columnwidth]{air_graph_with_fits.png}
     \caption{Graph of Air Column Length vs. Wavelength of Sound Wave}
 \end{figure}
-
- We can construct $L = m\lambda$ equations from the three subsets of the data, where $L$ = length of the air column and $\lambda$ = wavelength of the sound wave. This gives us the length of the air column in terms of the wavelength of the sound wave. We can manipulate the equation to get $\lambda = \frac{L}{m}$, which gives us the wavelength of the sound wave in terms of the length of the air column. This means that the data tells us the relationship between the length of the air column and the wavelength of the sound wave.
+We can construct $L = m\lambda$ equations from the three subsets of the data, where $L$ = length of the air column and $\lambda$ = wavelength of the sound wave. This gives us the length of the air column in terms of the wavelength of the sound wave. We can manipulate the equation to get $\lambda = \frac{L}{m}$, which gives us the wavelength of the sound wave in terms of the length of the air column. This means that the data tells us the relationship between the length of the air column and the wavelength of the sound wave.
  
 \textbf{Equation Fits for subsets of data:}
 
@@ -50,10 +51,39 @@ Green Line: $L = \frac{1}{4}\lambda$, $\lambda = 4L$
 
 These equations mean that one $\lambda$ is $\frac{4}{5}$, $\frac{4}{3}$, and $4$ times the length of the tube, respectively. These equations can also help us draw the resonant sound waves in the pipes. Below are the diagrams for all subsets:
 
+% \begin{figure}[H]
+% \centering
+
+% \begin{minipage}{\textwidth}
+%   \centering
+%   \includegraphics[width=.33\columnwidth]{lambda_4.png}
+%   \label{fig:test1}
+% \end{minipage}
+
+% \begin{minipage}{\textwidth}
+%   \centering
+%   \includegraphics[width=.33\columnwidth]{lambda_4_5.png}
+%   \label{fig:test2}
+% \end{minipage}
+
+% \begin{minipage}{\textwidth}
+%   \centering
+%   \includegraphics[width=.33\columnwidth]{lambda_3_4.png}
+%   \label{fig:test2}
+% \end{minipage}
+
+% \end{figure}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\columnwidth]{resonant_sonud_waves.jpg}
-    \caption{Resonant Sound Waves Diagrams for All Subsets of Data}
+    \includegraphics[width=0.5\columnwidth]{lambda_4.png}
+    \caption{Sound Waves Diagram for $\lambda = 4L$}
+    
+    \includegraphics[width=0.6\columnwidth]{lambda_4_5.png}
+    \caption{Sound Waves Diagram for $\lambda = \frac{4}{5}L$}
+    
+    \includegraphics[width=0.6\columnwidth]{lambda_3_4.png}
+    \caption{Sound Waves Diagram for $\lambda = \frac{4}{3}L$}
 \end{figure}
 
 We can see that the each of the waves have with a node at the closed end of the tube and an antinode at the open end. This is due to the boundary conditions of the wave, which are that wave can vibrate at the open end and not at the closed end. A node is therefore formed at the closed end because the air molecules are not free to vibrate back and forth at the closed end. The opposite occurs at the open end to allow for the formation of an antinode. Since the wave has to start with a node and end with an antinode, it is not possible for any equation fits to be of the form $L = \frac{1}{2}\lambda$. An wave with this equation would have nodes at both ends, which is not possible. A standing wave diagram illustrates this below:
@@ -91,22 +121,32 @@ We can extend our analysis to weighing molecules. For example, the speed of soun
 
 \section{Resonance and its Connection to this Lab}
 
-Resonance is the phenomenon that causes a wave to have increased amplitude. This occurs at certain frequencies, or when the incident and reflected wave are in phase, resulting in constructive interference. In this lab, we observed the points of resonance when the length of the air column allowed for the standing wave to have a node at the closed end and antinode at the open end. The below figure shows the incident wave (in red), reflected wave (in purple), and the net wave (in green).
+Resonance is the phenomenon that causes a wave to have increased amplitude. This occurs at certain frequencies, or when the incident and reflected wave are in phase, resulting in constructive interference. In this lab, we observed the points of resonance when the length of the air column allowed for the standing wave to have a node at the closed end and antinode at the open end. It was in these scenarios that constructive inference was able to occur. The below figure shows the incident wave (in red), reflected wave (in purple), and the ``net" wave (in green).
 
-\begin{figure}[H]
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.4\columnwidth]{resonance.png}
+%     \caption{The Effect of Resonance}
+% \end{figure}
+
+\begin{wrapfigure}{l}{0.45\textwidth}
     \centering
-    \includegraphics[width=0.5\columnwidth]{resonance.png}
+    \includegraphics[width=0.45\textwidth]{resonance.png}
     \caption{The Effect of Resonance}
-\end{figure}
+\end{wrapfigure}
 
-As you can see, constructive inference occurs with then incident and reflected wave, resulting in the phenomenon of resonance taking effect and creating a wave with a amplitude twice the amplitude of incident/reflected waves. If two tuning forks are held over the time at the same time and are in sync with each other, then resonance will increase double the amplitude of the wave. This is because the incident and reflected waves of both tuning forks are in phase, resulting in resonance occuring. The figure on the next page shows this idea:
+As you can see, constructive inference occurs with then incident and reflected wave, resulting in the phenomenon of resonance taking effect and creating a wave with an amplitude twice the amplitude of incident/reflected waves. If two tuning forks are held over the time at the same time and are in sync with each other, then resonance will amplify the sound wave double as much as the scenario in which there is only one tuning fork.This is because the incident and reflected waves of both tuning forks are in phase, resulting in resonance occurring. The figure on the next page shows this idea:
 
-\newpage 
+\clearpage 
 
-\begin{figure}[H]
+\begin{figure}
     \centering
-    \includegraphics[width=0.5\columnwidth]{resonance_two_tuning_forks.png}
+    \includegraphics[width=0.5\textwidth]{resonance_two_tuning_forks.png}
     \caption{The Effect of Resonance with Two Tuning Forks}
-\end{figure}
+\end{figure} 
+
+The amplitude produced by the resonance can be generalized to $2N \cdot A_{incident}$, where $N$ is number of tuning forks, and $A_{incident}$ is the amplitude of the incident wave. 
+
+The concept of resonance can also be seen when you blow over the top of a glass bottle and a tone is created. When you blow over the top of a bottle, you produce many different frequencies. Some of the many frequencies produced allows for the incident and reflected wave to be in phase resulting in resonance amplifying the sound wave. All the other frequencies that are generated do not change the tone created, as they are not amplified. This is similar to the concept of a velocity selector that we discussed earlier this term. Particles are fired at many different velocities, but only those fired at a certain velocity can travel through the hole. The resonant frequencies can be thought of as the particles being fired at the velocity needed to go through the hole.
 
 \end{document}
