@@ -30,7 +30,7 @@
 \lightertitle{Speed of Sound Lab Report}
 \lighterauthor{Tanish Tyagi}
 
-\section{Analysis of Standing Waves in Air Data}
+\section{Analysis of Standing Waves in Air}
 
 \begin{figure}[H]
     \centering
@@ -56,6 +56,37 @@ These equations mean that one $\lambda$ is $\frac{4}{5}$, $\frac{4}{3}$, and $4$
     \caption{Resonant Sound Waves Diagrams for All Subsets of Data}
 \end{figure}
 
-We can see that the each of the waves have with a node at the closed end of the tube and an antinode at the open end. This is because the air molecules are not free to vibrate back and forth at the closed end, therefore forming a node. At the open end of the tube, the air molecules are free to vibrate, which allows for the formation of an antinode. 
+We can see that the each of the waves have with a node at the closed end of the tube and an antinode at the open end. This is because the air molecules are not free to vibrate back and forth at the closed end, therefore forming a node. At the open end of the tube, the air molecules are free to vibrate, which allows for the formation of an antinode. Since the wave has to start with a node and end with an antinode, it is not possible for any equation fits to be of the form $L = \frac{1}{2}\lambda$. An wave with this equation would have nodes at both ends, which is not possible. A standing wave diagram illustrates this below:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\columnwidth]{L_0.5_wavelength.png}
+    \caption{Standing Wave with Equation $L = 0.5\lambda$}
+\end{figure}
+
+\section{Analysis of Standing Waves in $CO_2$}
+
+To determine the wavelength of the standing waves in $CO_2$, we can turn to our data that says the positions of the two $CO_2$ resonances are $0.12$ and $0.39$m. The positions of these resonances have to be antinodes, and they construct a standing wave that looks like this:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{0.5_wavelength.png}
+    \caption{Standing Wave for $CO_2$ Data}
+\end{figure}
+
+As you can see, the distance between $0.12$ and $0.39$m is equivalent to $\frac{\lambda}{2}$. Therefore, the wavelength for the standing wave in $CO_2$ is $(0.39 - 0.12) \cdot 2 = 0.54$m. If we revisit the graph in Figure 1, we can see that the resonance positions of 0.39 and 0.12m fall into the pink and blue clusters of data points, respectively. The equation for the pink cluster is $\lambda = \frac{4}{3}L$ and $\lambda = 4L$ for the blue cluster. Using these equations, we can find the $\lambda$ for the standing wave with a resonance at $0.39$ m to be $\frac{4}{3}(0.39)$ = $0.52$m and $4(0.12)$ = $0.48$m for the standing wave with a resonance at $0.12$m. We can now use the wave equation with $f$ = $500$hz to get two wave speeds, $260$ and $240$m/s. We can average these values to get an experimental speed of $CO_2$ value of $250$m/s. 
+
+We can use the percent error formula 
+$\delta = |\frac{V_{true} - V_{observed}}{V_{true}}| \cdot 100$ to compare our experimental value with the accepted value of $260$m/s. The percent error is $\approx 3.8\%$, which is quite small for measurements that are only accurate to 2 significant figures. Additionally, it is easy to be inaccurate with recording the positions of resonances, as the water level is rising rapidly and there is a ever present risk of identifying false positives. 
+
+We can also find the speed of sound in $CO_2$ using the established fact that the speed of sound in air is $340$m/s and the kinetic theory of gases. The kinetic energy of $N_2$ and $CO_2$ molecules should be the same by the kinetic theory of gases. The formula for kinetic energy is $\frac{1}{2}(m)(v)^2$. We need to get the mass of $N_2$ and $CO_2$ from amu to kg first. 
+
+Mass of $N_2$: $\approx 4.6 \cdot 10^{-26}$ kg
+
+Mass of $CO_2$: $\approx 7.3 \cdot 10^{-26}$ kg 
+
+Therefore, the kinetic energy for the $N_2$ molecules is $KE_{N_2} = \frac{1}{2}(4.6 \cdot 10^{-26})(340)^2 \approx 2.7 \cdot 10^{-21}$ J. We can solve for the $v$ in the equation for kinetic energy in $CO_2$ to get $271.22 \approx 270$ m/s.
+
+We can extend our analysis to weighing molecules. For example, the speed of sound in methane, $CH_4$, is $445$m/s. Using the kinetic theory of gases, we know that the kinetic energy of molecules in $CH_4$ has to be equal to the kinetic energy of molecules in air. We know that $KE_{N_2} \approx 2.7 \cdot 10^{-21}$ J. We can set $\frac{1}{2}(m)(445)^2$ = $KE_{N_2}$, and solve for $m$ to get $m$ = $2.7 \cdot 10^{-26}$kg. We can convert this to amu and get that the molecular mass of methane is $\approx 16$ amu.
 
 \end{document}
